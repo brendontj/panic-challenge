@@ -1,0 +1,28 @@
+{
+  "name": "back_end",
+  "version": "1.0.0",
+  "description": "Back End for Panic Intership Challenge ",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brendonhps/panic-challenge.git"
+  },
+  "author": "Brendon Henrique",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/brendonhps/panic-challenge/issues"
+  },
+  "homepage": "https://github.com/brendonhps/panic-challenge#readme",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mongoose": "^5.8.11"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  },
+  "scripts": {
+    "dev": "nodemon src/index.js"
+  }
+}

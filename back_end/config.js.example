@@ -1,0 +1,4 @@
+module.exports = {
+    username: 'MONGODB_ATLAS_USERNAME',
+    password: 'MONGODB_ATLAS_PASSWORD'
+};
