@@ -4,7 +4,7 @@ To run the back-end I recommend using the **Docker** .
 ([Docker](https://www.docker.com/why-docker))
 
 # First step
-- After clone the project remove the ***.example***  extension in config.js.example file, and set the variables with your credantials of [MongoDB Atlas](https://www.mongodb.com/cloud/atlas).
+- After clone the project remove the ***.example***  extension in config.js.example file, and set the variables with your credentials of [MongoDB Atlas](https://www.mongodb.com/cloud/atlas).
 
 - So, after this change the string connection on file **src/index.js** using this layout by the string defined in your cluster: 
 
