@@ -1,19 +1,14 @@
-import React from 'react';
-import './App.css';
+import React, {Component} from 'react';
 import './global.css';
-import './sidebar.css';
+import Routes from "./routes";
 
-function App() {
-  const { children } = this.props;
-  return (
-    <div >
-      <Menu />
-      <Sidebar />
-      <section className='content'>
-        {children}
-      </section>
-    </div>
-  );
+class App extends Component {
+  
+  render () {
+    return (
+      <Routes />  
+    );
+  }
 }
 
 export default App;
