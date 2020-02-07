@@ -16,19 +16,18 @@ const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1,
   },
-  menuButton: {
-    marginRight: theme.spacing(2),
-  },
   title: {
     flexGrow: 1,
     textAlign: 'center',
+    marginBottom: '0px'
   },
     img: {
     margin: 'auto',
     marginLeft: '5px%',
     display: 'left',
-    maxWidth: '30%',
-    maxHeight: '30%'
+    maxWidth: '20%',
+    maxHeight: '20%',
+    marginBottom: '0px'
   }
 }));
 
