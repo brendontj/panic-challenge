@@ -1,0 +1,19 @@
+.github_link {
+    float:right;
+    margin-left: 5px;
+}
+.edit_link {
+    margin-left: 5px;
+    float:right;
+}
+.info_link {
+    margin-left: 5px;
+    float: right;
+}
+
+.delete_link {
+    margin-left: 5px;
+    float:right;
+
+}
+

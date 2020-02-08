@@ -25,8 +25,8 @@ const useStyles = makeStyles(theme => ({
     margin: 'auto',
     marginLeft: '5px%',
     display: 'left',
-    maxWidth: '20%',
-    maxHeight: '20%',
+    maxWidth: '40%',
+    maxHeight: '40%',
     marginBottom: '0px'
   }
 }));
@@ -42,12 +42,15 @@ export default function Menu() {
       <div className={classes.root}>
         <AppBar position="static" style={{ background: 'transparent', boxShadow: 'none'}}>
           <Toolbar>
+           <Link  to={'/lista_candidatos'}>
           <img
               className={classes.img}
               alt='logo-panic'
               src='../logoInverted.png'
+              
             />
-            <Typography variant="h4" className={classes.title}>
+            </Link>
+            <Typography variant="h3" className={classes.title}>
               Intership Challenge
           </Typography>
             <Button 

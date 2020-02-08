@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import Menu from '../../components/Menu';
-import SideBar from '../../components/SideBar';
+import CandidateForm from '../../components/CandidateForm';
 
 class PageForm extends Component {
 
@@ -10,7 +10,7 @@ class PageForm extends Component {
         return (
             <>
                 <Menu />
-                <SideBar />
+                <CandidateForm />
                 
             </>
 
