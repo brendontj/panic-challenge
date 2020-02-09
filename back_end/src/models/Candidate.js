@@ -6,7 +6,7 @@ const CandidateSchema = new mongoose.Schema({
     email: String,
     birthdate: Date,
     cpf: String,
-    state: String,
+    state_candidate: String,
     city: String,
     git: {
         username: String,

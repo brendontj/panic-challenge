@@ -5,7 +5,7 @@ const Candidate = require ('../models/Candidate');
 module.exports = { 
 
     store: async (req, res) => {
-        const { full_name, email, birthdate, cpf, state, city, github_username} = req.body;
+        const { full_name, email, birthdate, cpf, state_candidate, city, github_username} = req.body;
         
 
         let candidate = await Candidate.findOne({ cpf });
@@ -20,7 +20,7 @@ module.exports = {
                 email,
                 birthdate,
                 cpf,
-                state,
+                state_candidate,
                 city,
                 git: { 
                     username: github_username,
@@ -37,9 +37,14 @@ module.exports = {
         return res.status(200).json(candidates);
     },
 
+    show: async (req,res) => {
+        const candidate = await Candidate.findById(req.params.id);
+        return res.status(200).json(candidate);
+    },
+
     update: async (req, res) => { 
         const candidate_cpf = req.params.cpf;
-        const { full_name, email, birthdate, state, city, github_username} = req.body;
+        const { full_name, email, birthdate, state_candidate, city, github_username} = req.body;
 
         const responseGitApi = await axios.get(`https://api.github.com/users/${github_username}`);    
         const { avatar_url, bio} =  responseGitApi.data;
@@ -48,7 +53,7 @@ module.exports = {
             full_name,
             email,
             birthdate,
-            state,
+            state_candidate,
             city,
             git: {
                 username: github_username,

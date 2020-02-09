@@ -34,6 +34,7 @@ async handleSubmit() {
   render () {
     return (
       <Container maxWidth='md'>
+        <Link to="/lista_candidatos" className="btn btn-primary" >Voltar</Link>
         <form >
           
           <div className='input-block'>
