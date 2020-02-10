@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom'
 import { Container } from '@material-ui/core'
 import List from '@material-ui/core/List'
 import ListItem from '@material-ui/core/ListItem'
-// import Divider from '@material-ui/core/Divider';
+
 import ListItemText from '@material-ui/core/ListItemText'
 import ListItemAvatar from '@material-ui/core/ListItemAvatar'
 import Avatar from '@material-ui/core/Avatar'
@@ -37,6 +37,9 @@ export default class CandidateList extends Component {
 
   async deleteCandidate (cpf) {
     await api.delete(`/candidate/${cpf}`)
+    const response = await api.get('/candidate')
+
+    this.setState({ candidates: response.data })
   }
 
   useStyles = makeStyles(theme => ({
@@ -106,7 +109,7 @@ export default class CandidateList extends Component {
                     </Link>
                     <Link
                       className='info_link'
-                      to={`/info_candidato/${candidate.cpf}`}
+                      to={`/info_candidato/${candidate._id}`}
                     >
                       <InfoIcon color='primary' />
                     </Link>
@@ -121,7 +124,6 @@ export default class CandidateList extends Component {
                     <Typography
                       component='span'
                       variant='body2'
-                      //   className={this.useStyles.textState}
                       style={{
                         color: '#FFFFFF',
                         float: 'right',
@@ -134,7 +136,6 @@ export default class CandidateList extends Component {
                     <Typography
                       component='span'
                       variant='body2'
-                      //   className={this.useStyles.textCity}
                       style={{
                         color: '#FFFFFF',
                         float: 'right',

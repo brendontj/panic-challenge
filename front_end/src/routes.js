@@ -10,7 +10,7 @@ const Routes = () => (
             <Route path="/cadastro" component={PageForm} />
             <Route path="/lista_candidatos" component={PageList} />
             <Route path="/editar_candidato/:cpf" component={PageEdit} />
-            <Route path="/info_candidato/:cpf" component={PageInfo} />
+            <Route path="/info_candidato/:id" component={PageInfo} />
             <Route path="*" render={ () => ( <Redirect to='/lista_candidatos' />)} />
         </Switch>
     </BrowserRouter>
